@@ -1,7 +1,8 @@
 class ListsController < ApplicationController
 
   def create
-    @list = List.new(params[:list])
+    @list = user_lists.new(params[:list])
+    @list.user = current_user if current_user
     if @list.save
         flash[:notice] = "Your list was created"
     else
@@ -11,11 +12,21 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params[:id])
+    @list = user_lists.find(params[:id])
     @list.destroy
 
     respond_to do |format|
       format.html { redirect_to(root_url) }
     end
   end
+
+  private
+  def user_lists
+    if current_user
+      current_user.lists
+    else
+      List.guest_lists
+    end
+  end
+
 end

@@ -6,6 +6,8 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_autolink'
 
+gem 'devise'
+
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
