@@ -6,7 +6,7 @@ Listr::Application.routes.draw do
     resources :tasks, :except => [:new, :edit, :show]
   end
 
-  mount UserImpersonate::Engine => "/impersonate"
+  mount UserImpersonate::Engine => "/impersonate", as: "impersonate_engine"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
   
   has_many :lists
   has_many :tasks, :through => :lists
+  
+  def staff?
+    true
+  end
+
+  def to_s
+    email
+  end
 end
