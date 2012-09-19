@@ -8,6 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if current_staff_user %>
+    <%= render 'user_impersonate/header' %>
+  <% end %>
     <div id="all">
         <div id="header">
             <div id="logo">
@@ -17,7 +20,7 @@
             <%= render "layouts/account_bar" %>
         </div>
         <div id="content">
-            <% if alerted = alert %>
+            <% if alerted = (alert || flash[:error] || flash[:notice]) %>
                 <p id="alert"><%= alerted %></p>
             <% end %>
             <%= yield %>
