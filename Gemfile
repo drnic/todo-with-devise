@@ -8,6 +8,7 @@ gem 'rails_autolink'
 
 gem 'devise'
 gem 'user_impersonate'
+# gem 'user_impersonate', path: '/Users/drnic/Projects/gems/user_impersonate'
 
 group :assets do
   gem 'sass-rails'
