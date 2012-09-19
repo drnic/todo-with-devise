@@ -120,6 +120,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    user_impersonate (0.5.0)
+      rails (~> 3.2.8)
     warden (1.2.1)
       rack (>= 1.0)
 
@@ -148,3 +150,4 @@ DEPENDENCIES
   trinidad
   uglifier
   unicorn
+  user_impersonate

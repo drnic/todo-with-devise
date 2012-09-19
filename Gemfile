@@ -7,6 +7,7 @@ gem 'jquery-rails'
 gem 'rails_autolink'
 
 gem 'devise'
+gem 'user_impersonate'
 
 group :assets do
   gem 'sass-rails'
