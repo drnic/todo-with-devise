@@ -120,8 +120,8 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    user_impersonate (0.7.0)
-      rails (~> 3.2.8)
+    user_impersonate (0.8.0)
+      rails (~> 3.2.0)
     warden (1.2.1)
       rack (>= 1.0)
 
